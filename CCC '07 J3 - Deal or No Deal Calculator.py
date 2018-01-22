@@ -3,7 +3,7 @@ N = int(input())
 data = input()
 
 result = data.split(sep=" ", maxsplit=N)
-
+result = map(int,result)
 offer = int(input())
 
 d = {
@@ -20,15 +20,19 @@ d = {
 }
 
 h = []
+
 for i in result:
-  e = int(d[i])
-  h.append(e)
+  h.append(float(d[i]))
+
 
 h = sum(i for i in h)
 
 f = sum(d.values())
 
-print (f)
 g = (f-h)/N
 
-print (g)
+
+if g > offer:
+  print ("no deal")
+else:
+  print ("deal")
