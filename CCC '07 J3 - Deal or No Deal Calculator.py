@@ -26,13 +26,13 @@ for i in result:
 
 
 h = sum(i for i in h)
-
+print (h)
 f = sum(d.values())
 
-g = (f-h)/N
+average = (f-h)/N
+print(average)
 
-
-if g > offer:
-  print ("no deal")
-else:
+if offer > average:
   print ("deal")
+else:
+  print ("no deal")
