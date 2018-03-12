@@ -1,0 +1,11 @@
+haystack = input()
+needle = input()
+
+
+counter = 0
+for i in range(0, len(haystack)):
+   if needle == haystack[i:len(needle)+i]:
+      f = haystack.index(needle)
+
+
+print (f)
