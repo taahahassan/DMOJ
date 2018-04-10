@@ -6,15 +6,17 @@ result = n.split(sep=" ", maxsplit=N)
 
 l = []
 for i in result:
-  if D % int(i) == 0:
-    l.append(i)
+  i = int(i)
+  if i != 0 and D % i == 0:
+    l.append(
   
 if len(l) == 0:
-  print ("This is not the best time for a trip")
+  print ("This is not the best time for a trip.")
 else:
   w = max(l)
-  y = D/int(w)
+  y = int(D)/int(w)
   if y < 0:
-    print (-1 * y)
+    print (str((int(-1*y))))
   else:
-    print (y)
+    print (str((int(y))))
+
